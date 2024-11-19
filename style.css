@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f7f7f7;
+  height: 70px;
+  width: 96%;
+}
+
+.logo {
+  width: 80px;
+  cursor: pointer;
+}
+
+.search-area {
+  width: 1000px;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+}
+
+#searchInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+}
+
+#searchButton {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: #222324;
+  color: rgb(243, 240, 240);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #191a1a;
+}
+
+/* Estilos de las imágenes */
+.main-images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.image-item {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 30%;
+  margin: 10px;
+}
+
+.image-item:hover {
+  transform: scale(1.05);
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+.image-details {
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.image-details p {
+  margin: 0;
+}
+
+.image-details p:first-child {
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 30%;
+    margin-bottom: 10px;
+  }
+
+  .search-area {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  #searchInput {
+    padding: 8px;
+    width: 75%;
+  }
+
+  #searchButton {
+    padding: 8px 15px;
+  }
+
+  .main-images {
+    justify-content: center;
+  }
+
+  .image-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .image-details {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .image-item {
+    width: 48%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #searchInput {
+    width: 250px;
+  }
+}
