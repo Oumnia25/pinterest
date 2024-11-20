@@ -49,7 +49,7 @@ body {
   background-color: #191a1a;
 }
 
-/* Estilos de las imágenes */
+
 .main-images {
   display: flex;
   justify-content: space-around;
@@ -92,7 +92,7 @@ body {
   font-weight: bold;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   body {
     flex-direction: column;

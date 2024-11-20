@@ -1,4 +1,4 @@
-// components/ImageItem.js
+
 export default function ImageItem({ imgUrl, description, photographer, likes }) {
   const container = document.createElement('section');
   container.classList.add('image-item');

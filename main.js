@@ -24,7 +24,7 @@ async function fetchImages(searchTerm = '') {
     } else if (searchTerm) {
       alert('No se encontraron imágenes para esa búsqueda.');
     } else {
-      renderImages(data); // Para las imágenes aleatorias
+      renderImages(data); 
     }
   } catch (error) {
     console.error("Error al cargar las imágenes:", error.message, error.stack);
@@ -33,7 +33,7 @@ async function fetchImages(searchTerm = '') {
 }
 
 function renderImages(images) {
-  // Limpia únicamente el contenedor de imágenes
+
   const imageContainer = document.getElementById('imageContainer');
   if (imageContainer) {
     imageContainer.innerHTML = '';
@@ -42,13 +42,12 @@ function renderImages(images) {
     return;
   }
 
-  // Agrega las imágenes al contenedor
   const imageList = ImageList(images);
   imageContainer.appendChild(imageList);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Crear estructura inicial del DOM
+
   const header = Header({ onSearch: fetchImages });
   document.body.appendChild(header);
 
@@ -56,10 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
   imageContainer.id = 'imageContainer';
   document.body.appendChild(imageContainer);
 
-  // Cargar imágenes iniciales
+
   fetchImages();
 
-  // Configurar eventos para búsqueda
+
   const searchButton = document.getElementById('searchButton');
   const searchInput = document.getElementById('searchInput');
   
