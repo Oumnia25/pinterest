@@ -1,7 +1,7 @@
 import Header from './js/header.js';
 import ImageList from './js/mainimagenes.js';
 
-const ACCESS_KEY = 'JQZEhs7Zw8YMABIhemnh2fvcbnhhwBbDRSQl6Lds-lY';
+const ACCESS_KEY = 'LgR3-d8C_o2Pv7EfGzF-6VCsgArlzbbCNAxOFsESWp4';
 
 async function fetchImages(searchTerm = '') {
   let url = `https://api.unsplash.com/photos/random?count=9&client_id=${ACCESS_KEY}`;

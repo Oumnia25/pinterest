@@ -1,14 +1,11 @@
-
 export default function Header({ onSearch }) {
   const header = document.createElement('header');
   header.classList.add('header');
-
 
   const logo = document.createElement('img');
   logo.src = 'https://res.cloudinary.com/dbtc8nyvm/image/upload/v1697558137/pinterest/1200px-Pinterest.svg_lbkvwl.png';
   logo.alt = 'Logo';
   logo.classList.add('logo');
-
 
   const searchArea = document.createElement('section');
   searchArea.classList.add('search-area');
@@ -29,8 +26,14 @@ export default function Header({ onSearch }) {
 
 
   logo.addEventListener('click', () => {
-    fetchImages(); 
+  
+    searchInput.value = '';
+
+    if (typeof onSearch === 'function') {
+      onSearch(''); 
+    }
   });
 
   return header;
 }
+
